@@ -30,6 +30,8 @@ ASSET_MANAGER.downloadAll(function () {
             }
 
             socket.emit("save", {studentname: "Jowy", statename: "aState", data: sentData});
+            socket.emit("load", {studentname: "Jowy", statename: "aState"});
+
             console.log(sentData);
         };
 
@@ -37,7 +39,6 @@ ASSET_MANAGER.downloadAll(function () {
         loadButton.onclick = function () {
 
             gameEngine.entities = [];
-//            socket.emit("load", {studentname: "Jowy", statename: "aState"});
 
             if (data.data.fish !== null) {
                 for (var i = 0; i < data.data.fish.length; i++) {
