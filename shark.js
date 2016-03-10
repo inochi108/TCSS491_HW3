@@ -10,8 +10,8 @@ function Shark(game, x, y, direction) {
     this.distance;
     this.swim = new Animation(ASSET_MANAGER.getAsset("./shark.png"), 150, 150, 0.1, 1, true, false);
     this.shark = true;
-    this.x = 100;
-    this.y = 100;
+    this.x = x;
+    this.y = y;
 }
 
 Shark.prototype = new Entity();
